@@ -1,0 +1,18 @@
+$colors: (
+        primary-dark: $color-primary-dark,
+        secondary: $color-secondary,
+        success: $color-success,
+        primary:$color-primary,
+        danger:$color-danger,
+        white: $color-white,
+        black: $color-black,
+        gray: $color-gray,
+        dark: $color-dark,
+
+);
+
+@each $color, $hex in $colors {
+    .color-#{$color} {
+        color: $hex;
+    }
+}

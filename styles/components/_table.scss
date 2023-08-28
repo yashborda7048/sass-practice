@@ -1,0 +1,42 @@
+.table {
+    background-color: transparent;
+    max-width: 100%;
+    width: 100%;
+
+    &.table-default {
+        tr {
+            border-bottom: 1px solid $color-border;
+        }
+        th {
+            color: rgba($color-black, 0.6);
+            text-transform: uppercase;
+            padding-bottom: 8px;
+            text-align: left;
+
+            &:first-child, &:last-child {
+                color: $color-dark;
+            }
+        }
+        td {
+            vertical-align: middle;
+            padding-bottom: 13px;
+            padding-top: 13px;
+        }
+        .icon-group {
+            i {
+                color: rgba($color-black, 0.54);
+            }
+        }
+
+        .source {
+            i {
+                vertical-align: middle;
+                font-size: 20px;
+            }
+        }
+
+        .icon-setting {
+            font-size: 18px;
+        }
+    }
+}

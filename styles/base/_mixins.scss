@@ -1,0 +1,56 @@
+//mixin for font-face
+@mixin font-face($font-name, $file-name, $weight: normal) {
+    @font-face {
+        font-family: quote($font-name);
+        src: url($file-name + '.eot');
+        src: url($file-name + '.eot?#iefix')  format('embedded-opentype'),
+        url($file-name + '.woff2') format('woff2'),
+        url($file-name + '.woff') format('woff'),
+        url($file-name + '.ttf')  format('truetype'),
+        url($file-name + '.svg##{$font-name}')  format('svg');
+        font-weight: $weight;
+        font-style: normal;
+    }
+}
+
+//mixin for tooltip
+@mixin tooltip($bg-color, $color, $dir) {
+    background: $bg-color;
+    color: $color;
+    &:before {
+        content: "";
+        position: absolute;
+        @if ($dir == top) {
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 8px solid $bg-color;
+            transform: translate(-50%,-100%);
+            left: 50%;
+            top: 0;
+        }
+        @if ($dir == right) {
+            border-top: 10px solid transparent;
+            border-left: 8px solid $bg-color;
+            border-bottom: 10px solid transparent;
+            transform: translate(100%,-50%);
+            right: 0;
+            top: 50%;
+        }
+        @if ($dir == bottom) {
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 8px solid $bg-color;
+            transform: translate(-50%,100%);
+            bottom: 0;
+            left: 50%;
+        }
+        @if ($dir == left) {
+            border-top: 10px solid transparent;
+            border-right: 8px solid $bg-color;
+            border-bottom: 10px solid transparent;
+            transform: translate(-100%, -50%);
+            left: 0;
+            top: 50%;
+        }
+    }
+}

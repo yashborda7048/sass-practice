@@ -1,0 +1,27 @@
+.dashboard-top {
+    justify-content: space-between;
+    margin-bottom: 44px;
+    display: flex;
+
+    &>div {
+        align-items: center;
+        display: flex;
+
+        i {
+            color: rgba($color-black, 0.54);
+            margin-left: 10px;
+            font-size: 16px;
+        }
+    }
+}
+
+.segment-component {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    display: flex;
+
+    &>div {
+        display: flex;
+    }
+}

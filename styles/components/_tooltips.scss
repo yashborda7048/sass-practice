@@ -1,0 +1,79 @@
+.tooltip {
+    display: inline-block;
+    position: relative;
+    &:hover {
+        .tooltip-inner {
+            display: inline-block;
+        }
+    }
+}
+
+.tooltip-inner {
+    border-radius: $border-radius-sm;
+    font-family: $font-primary-semi;
+    position: absolute;
+    text-align: center;
+    line-height: 22px;
+    padding: 8px 16px;
+    min-width: 200px;
+    font-size: 14px;
+    max-width: 100%;
+    display: none;
+    z-index: 10;
+
+    &.top {
+        transform: translate(-50%, 100%);
+        bottom: -10px;
+        left: 50%;
+
+        &.primary {
+            @include tooltip($color-black, $color-white, top);
+        }
+
+        &.secondary {
+            @include tooltip($color-secondary, $color-primary, top);
+        }
+    }
+
+    &.right {
+        transform: translate(-100%,-50%);
+        left: -10px;
+        top: 50%;
+
+        &.primary {
+            @include tooltip($color-black, $color-white, right);
+        }
+
+        &.secondary {
+            @include tooltip($color-secondary, $color-primary, right);
+        }
+    }
+
+    &.bottom {
+        transform: translate(-50%, -100%);
+        top: -10px;
+        left: 50%;
+
+        &.primary {
+            @include tooltip($color-black, $color-white, bottom);
+        }
+
+        &.secondary {
+            @include tooltip($color-secondary, $color-primary, bottom);
+        }
+    }
+
+    &.left {
+        transform: translate(100%,-50%);
+        right: -10px;
+        top: 50%;
+
+        &.primary {
+            @include tooltip($color-black, $color-white, left);
+        }
+
+        &.secondary {
+            @include tooltip($color-secondary, $color-primary, left);
+        }
+    }
+}

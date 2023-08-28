@@ -1,0 +1,11 @@
+//fonts path
+$fonts-path: '../../fonts/';
+
+//Inter Regular 400
+@include font-face('Inter Regular', $fonts-path + 'Inter-Regular/inter-regular');
+
+//Inter Medium 500
+@include font-face('Inter Medium', $fonts-path + 'Inter-Medium/inter-medium', 500);
+
+//Inter SemiBold 600
+@include font-face('Inter SemiBold', $fonts-path + 'Inter-Semibold/inter-semiBold', 600);

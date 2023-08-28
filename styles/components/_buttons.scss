@@ -1,0 +1,80 @@
+.btn {
+    border-radius: $border-radius-sm;
+    font-family: $font-primary-semi;
+    transition: $transition-xs;
+    text-transform: capitalize;
+    background-image: none;
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    text-align: center;
+    user-select: none;
+    line-height: 22px;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+    border: none;
+
+    i {
+        font-size: 18px;
+    }
+
+    //button types
+    &.btn-primary {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &:hover {
+            background-color: $color-primary-dark;
+        }
+    }
+    //button disabled
+    &.disabled {
+        background-color: $color-disabled-bg;
+        color: $color-disabled-text;
+        pointer-events: none;
+        cursor: auto;
+    }
+    //button link
+    &.btn-link {
+        color: $color-primary;
+        background: none;
+
+        &:hover {
+            color: $color-text-secondary;
+        }
+    }
+    //button with icon
+    &.with-icon-right {
+        i {
+            margin-left: 8px;
+        }
+    }
+    &.with-icon-left {
+        i {
+            margin-right: 8px;
+        }
+    }
+    //button sizes
+    &.sm {
+        padding: 5px 12px;
+
+        &.btn-icon {
+            padding: 7px;
+        }
+    }
+    &.md {
+        padding: 9px 24px;
+
+        &.btn-icon {
+            padding: 11px;
+        }
+    }
+    &.lg {
+        padding: 13px 24px;
+
+        &.btn-icon {
+            padding: 15px;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+.form-select {
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+    margin-right: 30px;
+    margin-top: 10px;
+    display: flex;
+
+    .select {
+        border-radius: $border-radius-sm;
+        border-width: 1.5px;
+        align-items: center;
+        border-style: solid;
+        margin-bottom: 4px;
+        margin-top: 4px;
+        display: flex;
+        padding: 12px;
+        width: 240px;
+
+        .left-icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .right-icon {
+            margin-left: auto;
+            font-size: 10px;
+        }
+    }
+
+    &.inactive {
+        color: $color-black;
+
+        .select {
+            border-color: $border-color;
+        }
+        .text {
+            color: $color-gray;
+        }
+    }
+
+    &.active {
+        color: $color-primary;
+
+        .select {
+            border-color: $color-primary;
+        }
+    }
+
+    &.disabled {
+        color: $color-disabled-text;
+
+        .select {
+            border-color: $border-disabled;
+        }
+    }
+
+    &.error {
+        color: $color-danger;
+
+        .select {
+            border-color: $color-danger;
+        }
+    }
+
+    &.success {
+        color: $color-success;
+
+        .select {
+            border-color: $color-success;
+        }
+    }
+
+    label, .helper {
+        line-height: 16px;
+        font-size: 12px;
+    }
+}
